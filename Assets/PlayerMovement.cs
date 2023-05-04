@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 12f;
+    public static float moveSpeed = 20f;
     public float turnSpeed = 180f;
     private Rigidbody rigidbody;
 
@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movementInputValue = Input.GetAxis("Vertical");
         turnInputValue = Input.GetAxis("Horizontal");
-
         Vector3 movement = transform.forward * moveSpeed * movementInputValue * Time.deltaTime;
         rigidbody.MovePosition(rigidbody.position + movement);
 
@@ -37,4 +36,5 @@ public class PlayerMovement : MonoBehaviour
         Quaternion turnRotation = Quaternion.Euler(0f,turn,0f);
         rigidbody.MoveRotation(rigidbody.rotation * turnRotation);
     }
+
 }
