@@ -9,7 +9,7 @@ public class CollisionDetection : MonoBehaviour
         print(other.gameObject.tag);
         print("Trigger Detected");
         if(other.gameObject.tag == "Player"){
-            PlayerMovement.moveSpeed = 45f;
+            PlayerMovement.moveSpeed += 5f;
         }
     }
 }

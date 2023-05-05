@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpeedBoost
+  - Fence
   layers:
   - Default
   - TransparentFX
